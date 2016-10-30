@@ -1,0 +1,96 @@
+/*Reset*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*Global*/
+html {
+	background 				: #6A6A6A;
+	color 					: #ffffff;
+	font-weight 			: 300;
+	font-family 			: 'Source Sans Pro', sans-serif;
+}
+body:not(.imprint) {
+	position 				: absolute;
+	top 					: 50%;
+	left 					: 50%;
+	-webkit-transform 		: translate(-50%, -50%);
+	-moz-transform 			: translate(-50%, -50%);
+	-ms-transform 			: translate(-50%, -50%);
+	-o-transform 			: translate(-50%, -50%);
+	transform 				: translate(-50%, -50%);
+	width 					: 95%;
+	margin 					: 0 auto;
+}
+body.imprint {
+	width 					: 95%;
+	max-width 				: 600px;
+	margin 					: 30px auto;
+}
+address {
+	font-style 				: normal;
+}
+
+/*Index*/
+h1 {
+	text-indent 			: -9999999px;
+	background 				: url(../images/thorbengrodon.jpg) no-repeat center center;
+	background-size 		: cover;
+	display 				: block;
+	width 					: 150px;
+	height 					: 150px;
+	border-radius 			: 100%;
+	border 					: 5px solid #A69257;
+	margin 					: 0 auto 30px;
+}
+h2 {
+	font-size 				: 3em;
+	text-align 				: center;
+	font-weight 			: 700;
+	margin-bottom 			: 5px;
+}
+p {
+	text-align 				: center;
+	line-height 			: 1.4;
+}
+a {
+	text-decoration 		: none;
+	color 					: #A69257;
+}
+a:hover,
+a:active,
+a:focus {
+	text-decoration 		: underline;
+}
+nav {
+	text-align 				: center;
+	margin-top 				: 30px;
+}
+nav ul li {
+	display 				: inline-block;
+	margin-right 			: 10px;
+}
+nav ul li:last-of-type {
+	margin-right 			: 0;
+}
+nav ul li {
+	border 					: 1px solid #A69257;
+	padding 				: 10px;
+	-webkit-transition 		: background 0.25s;
+	-moz-transition 		: background 0.25s;
+	-o-transition 			: background 0.25s;
+	transition 				: background 0.25s;
+}
+nav ul li:hover {
+	background 				: #333;
+}
+
+/*Imprint*/
+article {
+	margin-top 				: 30px;
+	line-height 			: 1.4;
+}
+h3 {
+	font-weight 			: 700;
+}
+body.imprint p {
+	text-align 				: left;
+}
