@@ -3,94 +3,152 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 
 /*Global*/
 html {
-	background 				: #6A6A6A;
-	color 					: #ffffff;
-	font-weight 			: 300;
-	font-family 			: 'Source Sans Pro', sans-serif;
+    background: #6A6A6A;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
-body:not(.imprint) {
-	position 				: absolute;
-	top 					: 50%;
-	left 					: 50%;
-	-webkit-transform 		: translate(-50%, -50%);
-	-moz-transform 			: translate(-50%, -50%);
-	-ms-transform 			: translate(-50%, -50%);
-	-o-transform 			: translate(-50%, -50%);
-	transform 				: translate(-50%, -50%);
-	width 					: 95%;
-	margin 					: 0 auto;
+
+body {
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px 0;
 }
-body.imprint {
-	width 					: 95%;
-	max-width 				: 600px;
-	margin 					: 30px auto;
-}
+
 address {
-	font-style 				: normal;
+    font-style: normal;
+}
+
+img {
+    vertical-align: middle;
 }
 
 /*Index*/
 h1 {
-	text-indent 			: -9999999px;
-	background 				: url(../images/thorbengrodon.jpg) no-repeat center center;
-	background-size 		: cover;
-	display 				: block;
-	width 					: 150px;
-	height 					: 150px;
-	border-radius 			: 100%;
-	border 					: 5px solid #A69257;
-	margin 					: 0 auto 30px;
+    text-indent: -9999999px;
+    background: url(../images/thorbengrodon.jpg) no-repeat center center;
+    background-size: cover;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 5px solid #A69257;
+    margin: 0 auto 30px;
 }
+
 h2 {
-	font-size 				: 3em;
-	text-align 				: center;
-	font-weight 			: 700;
-	margin-bottom 			: 5px;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
+
 p {
-	text-align 				: center;
-	line-height 			: 1.4;
+    text-align: center;
+    line-height: 1.4;
 }
+
 a {
-	text-decoration 		: none;
-	color 					: #A69257;
+    text-decoration: none;
+    color: #A69257;
 }
-a:hover,
-a:active,
-a:focus {
-	text-decoration 		: underline;
+
+a:hover {
+    text-decoration: underline;
 }
+
 nav {
-	text-align 				: center;
-	margin-top 				: 30px;
+    text-align: center;
+    margin-top: 30px;
 }
-nav ul li {
-	display 				: inline-block;
-	margin-right 			: 10px;
+
+nav ul {
+    display: inline-block;
 }
+
+nav ul:after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
 nav ul li:last-of-type {
-	margin-right 			: 0;
+    margin-right: 0;
 }
+
 nav ul li {
-	border 					: 1px solid #A69257;
-	padding 				: 10px;
-	-webkit-transition 		: background 0.25s;
-	-moz-transition 		: background 0.25s;
-	-o-transition 			: background 0.25s;
-	transition 				: background 0.25s;
+    float: left;
+    margin-right: 10px;
 }
+
+nav ul li a,
+nav ul li label {
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #A69257;
+    -webkit-transition: background 0.25s;
+    -moz-transition: background 0.25s;
+    -o-transition: background 0.25s;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
 nav ul li:hover {
-	background 				: #333;
+    background: #333;
 }
 
 /*Imprint*/
-article {
-	margin-top 				: 30px;
-	line-height 			: 1.4;
+body.imprint-active .imprint {
+    display: block;
 }
-h3 {
-	font-weight 			: 700;
+
+body.imprint-active label:after {
+    content: '\2715';
+    color: #A69257;
+    width: 32px;
+    height: 32px;
+    display: block;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
 }
-body.imprint p {
-	text-align 				: left;
+
+body.imprint-active label img {
+    display: none;
+}
+
+.imprint {
+    display: none;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.imprint article {
+    margin-top: 30px;
+    line-height: 1.4;
+}
+
+.imprint h3 {
+    font-weight: 700;
+}
+
+.imprint p {
+    text-align: left;
+}
+
+@media all and (min-width: 500px) and (min-height: 450px) {
+
+    body:not(.imprint-active) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
 }
