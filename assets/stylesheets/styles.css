@@ -3,10 +3,18 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 
 /*Global*/
 html {
-    background: #6A6A6A;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #6A6A6A;
     font-weight: 300;
     font-family: 'Source Sans Pro', system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #6A6A6A;
+    color: #ffffff
+  }
 }
 
 body {
@@ -96,7 +104,13 @@ nav ul li label {
 }
 
 nav ul li:hover {
-    background: #333;
+    background: #e6e6e6;
+}
+
+@media (prefers-color-scheme: dark) {
+    nav ul li:hover {
+        background: #333;
+    }
 }
 
 /*Imprint*/
